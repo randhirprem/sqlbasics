@@ -2,10 +2,11 @@
 -- create database chicken;
 -- show databses;
 use chicken;
-select database ();
+SELECT DATABASE();
 CREATE TABLE birds (
-name varchar(50),
-age INT);
+    name VARCHAR(50),
+    age INT
+);
 CREATE TABLE cats (
     name VARCHAR(50),
     age INT
@@ -41,7 +42,10 @@ VALUES ('Jenkins', 7);
 INSERT INTO cats (name, age) 
 VALUES ('Blue Steele', 5);
 -- select from chickden database the value of cats table.
-SELECT * FROM chicken.cats;
+SELECT 
+    *
+FROM
+    chicken.cats;
 -- alternate order of inserts.
 INSERT INTO cats (age, name) 
 VALUES 
@@ -53,13 +57,16 @@ VALUES
   ('Turkey', 1), 
   ('Potato Face', 15);
   -- check the cats table.
-  select * from cats;
+SELECT 
+    *
+FROM
+    cats;
   
   -- This exercise is to create a people table insert 1 set then reverse order then multiple insert
-  CREATE TABLE people(
-  first_name VARCHAR(20),
-  last_name VARCHAR(20),
-  age INT
+CREATE TABLE people (
+    first_name VARCHAR(20),
+    last_name VARCHAR(20),
+    age INT
 );
 -- Check the info from people table
 desc people;
@@ -75,7 +82,10 @@ VALUES
     ('Linda', 'Belcher', 45),
     ('Phillip', 'Frond', 38),
     ('Calvin', 'Fischoeder', 70);
-SELECT * FROM people;
+SELECT 
+    *
+FROM
+    people;
 SHOW TABLES;
 DROP TABLE people;
 
@@ -85,35 +95,40 @@ CREATE TABLE cats2 (
     age INT NOT NULL
 );
 -- THIS EXAMPLE IS SHOWING HOW TO PUT ' IN SQL.
-CREATE TABLE shops (name VARCHAR(100) NOT NULL);
+CREATE TABLE shops (
+    name VARCHAR(100) NOT NULL
+);
 INSERT INTO shops(name) VALUES ('shoe emporium');
 INSERT INTO shops(name) VALUES ('mario\'s pizza');
-SELECT * FROM shops;
+SELECT 
+    *
+FROM
+    shops;
 -- DEFAULT VALUES
-CREATE TABLE cats3  (    
-    name VARCHAR(20) DEFAULT 'no name provided',    
-    age INT DEFAULT 99  
+CREATE TABLE cats3 (
+    name VARCHAR(20) DEFAULT 'no name provided',
+    age INT DEFAULT 99
 );
 
 DESC cats3;
 INSERT INTO cats3(age) VALUES(13);
 INSERT INTO cats3() VALUES();
 -- THIS PREVENTS A NOT NULL CASE
-CREATE TABLE cats4  (    
-    name VARCHAR(20) NOT NULL DEFAULT 'unnamed',    
-    age INT NOT NULL DEFAULT 99 
+CREATE TABLE cats4 (
+    name VARCHAR(20) NOT NULL DEFAULT 'unnamed',
+    age INT NOT NULL DEFAULT 99
 );
 
 DESC cats4;
 
 -- PRIMARY KEY
 CREATE TABLE unique_cats (
-	cat_id INT PRIMARY KEY,
+    cat_id INT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     age INT NOT NULL
 );
 CREATE TABLE unique_cats2 (
-	cat_id INT,
+    cat_id INT,
     name VARCHAR(100) NOT NULL,
     age INT NOT NULL,
     PRIMARY KEY (cat_id)
@@ -141,4 +156,7 @@ CREATE TABLE employees (
 INSERT INTO employees(first_name, last_name, age) VALUES
 ('Dora', 'Smith', 58);
 
-select * from chicken.employees;
+SELECT 
+    *
+FROM
+    chicken.employees;

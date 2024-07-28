@@ -1,0 +1,17 @@
+location_id,location_name,location_type
+1,"common toilet",HDB
+2,"masterbed room toilet",HDB
+3,kitchen,HDB
+4,balcony,HDB
+5,"common room",HDB
+6,"masterbed room",HDB
+7,"living room",HDB
+8,"dining room",HDB
+9,"common toilet",NULL
+10,"masterbed room toilet",NULL
+11,kitchen,NULL
+12,balcony,NULL
+13,"common room",NULL
+14,"masterbed room",NULL
+15,"living room",NULL
+16,"dining room",NULL

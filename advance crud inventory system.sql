@@ -36,40 +36,113 @@ VALUES
 INSERT INTO shirts (article, color, shirt_size, last_worn)
 VALUES ('polo shirt','purple', 'M', 50);
 -- read the table
-Select * from shirts;
+SELECT 
+    *
+FROM
+    shirts;
 -- select all execpt for article and colour
-select article, color from shirts;
+SELECT 
+    article, color
+FROM
+    shirts;
 -- select medium shirts and print out everything except shirt_id
-select article, color, shirt_size, last_worn from shirts where shirt_size ='M';
+SELECT 
+    article, color, shirt_size, last_worn
+FROM
+    shirts
+WHERE
+    shirt_size = 'M';
 
 -- update all polo shirts where size is load
-select * from shirts where article = 'polo shirt';
-update shirts set shirt_size='L' where article = 'polo shirt';
-select * from shirts where article = 'polo shirt';
+SELECT 
+    *
+FROM
+    shirts
+WHERE
+    article = 'polo shirt';
+UPDATE shirts 
+SET 
+    shirt_size = 'L'
+WHERE
+    article = 'polo shirt';
+SELECT 
+    *
+FROM
+    shirts
+WHERE
+    article = 'polo shirt';
 
 -- update whirt last worn 15 days ago to 0
-select * from shirts where last_worn = 15;
-update shirts set last_worn=0 where last_worn=15;
-select * from shirts;
+SELECT 
+    *
+FROM
+    shirts
+WHERE
+    last_worn = 15;
+UPDATE shirts 
+SET 
+    last_worn = 0
+WHERE
+    last_worn = 15;
+SELECT 
+    *
+FROM
+    shirts;
 
 -- update all white shirts to xs and color to off white
-select * from shirts where color = 'white';
-update shirts set shirt_size = 'XS', color='off white' where color = 'white';
-select * from shirts;
+SELECT 
+    *
+FROM
+    shirts
+WHERE
+    color = 'white';
+UPDATE shirts 
+SET 
+    shirt_size = 'XS',
+    color = 'off white'
+WHERE
+    color = 'white';
+SELECT 
+    *
+FROM
+    shirts;
 
 -- delete shirts that are 200days old
-select * from shirts where last_worn = 200;
-delete from shirts where last_worn = 200;
-select * from shirts;
+SELECT 
+    *
+FROM
+    shirts
+WHERE
+    last_worn = 200;
+DELETE FROM shirts 
+WHERE
+    last_worn = 200;
+SELECT 
+    *
+FROM
+    shirts;
 
 -- delete all tank tops
-select * from shirts where article = 'tank top';
-delete from shirts where article = 'tank top';
-select * from shirts;
+SELECT 
+    *
+FROM
+    shirts
+WHERE
+    article = 'tank top';
+DELETE FROM shirts 
+WHERE
+    article = 'tank top';
+SELECT 
+    *
+FROM
+    shirts;
 
 -- delete the info in shirts table
-delete from shirts;
-select * from shirts;
+DELETE FROM shirts;
+SELECT 
+    *
+FROM
+    shirts;
 
 drop table shirts;
 
